@@ -1,0 +1,221 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regsitration</title>
+    <link rel="stylesheet" href="Registration.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+</style>
+<body>
+    <div id="wrapper">
+        <h1>Registration</h1>
+        <form action="register1.php" method="POST">
+            <div id="input-field">
+                <input type="text" name="first_name" placeholder="First Name" required>
+            </div>
+            <div id="input-field">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div id="input-field">
+                <input type="email" name="email" placeholder="Email" required>
+                <i class="bx bxs-envelope"></i>
+            </div>
+            <div id="input-field">
+                <input type="number" name="phone_number" placeholder="Phone Number" required>
+                <i class="bx bxs-phone"></i>
+            </div>
+            <div id="input-field">
+                <input type="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div id="input-field">
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <label><input type="checkbox" required> I hereby declare that the above information is true and correct</label>
+            <button type="submit" href="Login2.html">Register</button>
+        </form>
+        
+    </div>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('picone.jpg') no-repeat center;
+            background-size: cover;
+        }
+        #wrapper {
+            width: 1000px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(50px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: #23425a;
+            border-radius: 10px;
+            padding: 40px 35px 55px;
+            margin: 0 10px;
+        }
+        #wrapper h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #input-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #input-field {
+            position: relative;
+            width: 40%;
+            height: 50px;
+            margin: 13px 10px;
+        }
+        #input-field input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            outline: none;
+            border: 2px solid rgba(9, 8, 8, 0.2);
+            border-radius: 6px;
+            font-size: 16px;
+            color: #23425a;
+            padding: 15px 15px 15px 40px;
+        }
+        #input-field input::placeholder {
+            color: #23425a;
+        }
+        #input-field i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+        label {
+            display: block;
+            font-size: 14.5px;
+            margin: 15px 0 20px;
+        }
+        label input {
+            accent-color: #23425a;
+            margin-right: 5px;
+        }
+        #btn {
+            width: 100%;
+            height: 45px;
+            background: #23425a;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        @media (max-width: 576px) {
+            #input-field {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Registration</h1>
+        <form id="registrationForm" action="register1.php" method="POST" onsubmit="return validateForm()">
+            <div id="input-box">
+                <div id="input-field">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                </div>
+                <div id="input-field">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div id="input-field">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <i class="bx bxs-envelope"></i>
+                </div>
+                <div id="input-field">
+                    <input type="number" name="phone_number" placeholder="Phone Number" required>
+                    <i class="bx bxs-phone"></i>
+                </div>
+                <div id="input-field">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div id="input-field">
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="login-link">
+                    Already have an account? <a href="login2.html">Login</a>
+                </div>
+            </div>
+            <label>
+                <input type="checkbox" id="terms" required> I hereby declare that the above information is true and correct
+            </label>
+            <button type="submit" id="btn">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const phoneNumber = document.querySelector('input[name="phone_number"]').value;
+            const terms = document.getElementById('terms').checked;
+
+            // Validate password match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Validate phone number length (should be 10 digits)
+            if (phoneNumber.length !== 10) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            // Validate terms checkbox
+            if (!terms) {
+                alert("You must agree to the terms and conditions.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

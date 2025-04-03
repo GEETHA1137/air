@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Chennai","state":"Tamil Nadu","country":"India","location":{"type":"Point","coordinates":[80.27847,13.08784]},"current":{"pollution":{"ts":"2024-11-10T06:00:00.000Z","aqius":87,"mainus":"p2","aqicn":53,"maincn":"p1"},"weather":{"ts":"2024-11-10T06:00:00.000Z","tp":31,"pr":1011,"hu":69,"ws":5.66,"wd":60,"ic":"50d"}}}}

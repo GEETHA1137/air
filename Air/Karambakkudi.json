@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Karambakkudi","state":"Tamil Nadu","country":"India","location":{"type":"Point","coordinates":[79.14101,10.45866]},"current":{"pollution":{"ts":"2024-11-10T10:00:00.000Z","aqius":107,"mainus":"p2","aqicn":54,"maincn":"p2"},"weather":{"ts":"2024-11-10T10:00:00.000Z","tp":31,"pr":1008,"hu":52,"ws":5.93,"wd":42,"ic":"01d"}}}}

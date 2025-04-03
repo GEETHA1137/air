@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Pappankuppam","state":"Tamil Nadu","country":"India","location":{"type":"Point","coordinates":[80.09991,13.42247]},"current":{"pollution":{"ts":"2024-11-10T09:00:00.000Z","aqius":127,"mainus":"p2","aqicn":64,"maincn":"p2"},"weather":{"ts":"2024-11-10T10:00:00.000Z","tp":30,"pr":1009,"hu":64,"ws":6.66,"wd":32,"ic":"03d"}}}}

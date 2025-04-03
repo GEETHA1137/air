@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Madurai","state":"Tamil Nadu","country":"India","location":{"type":"Point","coordinates":[78.11898,9.91769]},"current":{"pollution":{"ts":"2024-11-10T10:00:00.000Z","aqius":62,"mainus":"p2","aqicn":33,"maincn":"p1"},"weather":{"ts":"2024-11-10T10:00:00.000Z","tp":32,"pr":1008,"hu":43,"ws":5.66,"wd":40,"ic":"03d"}}}}

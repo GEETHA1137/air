@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Cuddalore","state":"Tamil Nadu","country":"India","location":{"type":"Point","coordinates":[79.76693,11.75617]},"current":{"pollution":{"ts":"2024-11-10T10:00:00.000Z","aqius":82,"mainus":"p2","aqicn":37,"maincn":"p2"},"weather":{"ts":"2024-11-10T10:00:00.000Z","tp":28,"pr":1009,"hu":67,"ws":9.25,"wd":50,"ic":"01d"}}}}

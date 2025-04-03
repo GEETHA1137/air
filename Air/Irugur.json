@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Irugur","state":"Tamil Nadu","country":"India","location":{"type":"Point","coordinates":[77.06285,11.01782]},"current":{"pollution":{"ts":"2024-11-10T10:00:00.000Z","aqius":88,"mainus":"p2","aqicn":59,"maincn":"p1"},"weather":{"ts":"2024-11-10T10:00:00.000Z","tp":32,"pr":1009,"hu":37,"ws":2.57,"wd":90,"ic":"02d"}}}}
