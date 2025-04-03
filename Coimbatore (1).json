@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Coimbatore","state":"Tamil Nadu","country":"India","location":{"type":"Point","coordinates":[76.96612,11.00555]},"current":{"pollution":{"ts":"2024-11-10T06:00:00.000Z","aqius":69,"mainus":"p2","aqicn":51,"maincn":"p1"},"weather":{"ts":"2024-11-10T06:00:00.000Z","tp":29,"pr":1013,"hu":48,"ws":4.12,"wd":70,"ic":"02d"}}}}

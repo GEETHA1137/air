@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Webpage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <style>
+   body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Allow scrolling */
+    font-family: 'Roboto', sans-serif;
+}
+
+.video-background {
+    position: fixed; /* Fixed to ensure it stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video fully covers the screen */
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: rgba(104, 165, 231, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #007BFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-btn i {
+    margin-right: 8px;
+}
+
+.login-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(11, 14, 17, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    animation: fadeIn 1s;
+    z-index: 1;
+    min-height: auto; /* Let the container grow with content */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    animation: slideIn 1s;
+}
+
+.form-container {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+    animation: fadeIn 1s;
+}
+
+.form-container input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #218838;
+}
+
+.city-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.city-selection h2 {
+    margin-bottom: 10px;
+}
+
+.city-selection select, .city-selection button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+}
+
+.city-selection button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.city-selection button:hover {
+    background-color: #007BFF;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.air-quality-result {
+    margin-top: 20px;
+    animation: fadeIn 1s;
+}
+
+.footer {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(104, 165, 231, 0.8);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.about-us {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us i {
+    margin-right: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+  </style>
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="video.mov" type="video/mp4">
+      
+    </video>
+  </div>
+  
+  
+  <div class="container">
+    <h1 color="blue">Air Quality Check</h1>
+    
+    <div class="form-container" id="login-form">
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit"></button>
+      </form>
+    </div>
+    
+    <div class="city-selection">
+      <button onclick="checkAirQuality()">
+        <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </div>
+    
+    <div class="air-quality-result" id="air-quality-result"></div>
+  </div>
+  <div class="air-quality-result" id="air-quality-result"></div> <div class="about-air-quality"> <h2>About Air Quality</h2> <p>Air quality refers to the condition of the air within our surroundings. It is determined by the amount of pollutants present, which can affect human health, the environment, and even the economy. Poor air quality can lead to respiratory diseases, heart conditions, and can aggravate existing health problems.</p> <h3>Why Air Quality Check is Needed</h3> <p>Monitoring air quality is crucial for several reasons:</p> <ul> <li><b>Health Protection:</b> Regularly checking air quality helps in protecting public health by identifying and reducing exposure to harmful pollutants.</li> <li><b>Environmental Impact:</b> Understanding air quality helps in mitigating the effects of pollution on the environment, including plants, animals, and water bodies.</li> <li><b>Regulatory Compliance:</b> It aids governments and organizations in ensuring compliance with air quality standards and regulations.</li> <li><b>Public Awareness:</b> It raises awareness among the public about the quality of air they breathe and encourages them to take actions to improve it.</li> </ul> <h3>The Importance of Our Website</h3> <p>Our website plays a vital role in providing up-to-date information on air quality across different cities. By offering accurate and timely data, we help individuals and communities make informed decisions to safeguard their health and well-being. Our goal is to empower people with the knowledge they need to reduce their exposure to air pollution and contribute to a cleaner, healthier environment.</p> </div> </div>
+  
+  <footer class="footer">
+    <p>&copy; 2024 Enviro company. All rights reserved.</p>
+    <div class="about-us">
+      <i class="fas fa-info-circle"></i>
+      <a href="#about-us">About Us</a>
+    </div>
+  </footer>
+  
+  <script>
+    function checkAirQuality(){
+        window.location.href = "Login2.html";
+    }
+  </script>
+</body>
+</html>

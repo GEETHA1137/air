@@ -1,0 +1,140 @@
+            <!DOCTYPE html>
+            <style>* {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+            
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: url('picone.jpg');
+            }
+            
+            /* Forgot Password Modal */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .modal-content {
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                width: 350px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                position: relative;
+            }
+            
+            .modal-content h3 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+            
+            .modal-content p {
+                margin-bottom: 15px;
+                color: #555;
+            }
+            
+            .modal-content input {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 20px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                outline: none;
+            }
+            
+            .modal-content button {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 12px;
+                width: 100%;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            
+            .modal-content button:hover {
+                background-color: #0056b3;
+            }
+            
+            .close {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                color: #999;
+            }
+            
+            .close:hover {
+                color: #333;
+            }
+            </style>
+            <body>
+            <div id="forgotPasswordModal" s="modal">
+            <div class="modal-content">
+                    <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
+            <h3>Forgot Password</h3>
+            <p>Enter your email to receive password reset instructions:</p>
+            <input type="email" id="resetEmail" placeholder="Your Email" required>
+            <button onclick="sendResetEmail()">Send Reset Link</button>
+    </div></div>
+
+    <!-- JavaScript for Password Toggle, Forgot Password, and Form Validation -->
+    <script>
+        // Function to toggle password visibility
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleIcon = document.querySelector(".toggle-password");
+            
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.classList.remove('bx-show');
+                toggleIcon.classList.add('bx-hide');
+            } else {
+                passwordField.type = "password";
+                toggleIcon.classList.remove('bx-hide');
+                toggleIcon.classList.add('bx-show');
+            }
+        }
+
+        // Forgot Password Modal Functions
+        function openForgotPasswordModal() {
+            document.getElementById("forgotPasswordModal").style.display = "block";
+        }
+
+        function closeForgotPasswordModal() {
+            document.getElementById("forgotPasswordModal").style.display = "none";
+        }
+
+        function sendResetEmail() {
+            const email = document.getElementById("resetEmail").value.trim();
+
+            if (email === "") {
+                alert("Please enter your email.");
+                return;
+            }
+
+            // Simulating sending an email
+            alert(`Password reset link sent to ${email}`);
+            closeForgotPasswordModal();
+        }
+</script>
+</body>
+</html>

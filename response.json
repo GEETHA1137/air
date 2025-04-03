@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Chhindwara","state":"Madhya Pradesh","country":"India","location":{"type":"Point","coordinates":[78.93958,22.05697]},"current":{"pollution":{"ts":"2024-11-10T03:00:00.000Z","aqius":150,"mainus":"p2","aqicn":75,"maincn":"p2"},"weather":{"ts":"2024-11-10T06:00:00.000Z","tp":26,"pr":1015,"hu":40,"ws":2.42,"wd":65,"ic":"01d"}}}}

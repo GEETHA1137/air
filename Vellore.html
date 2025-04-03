@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Data</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#data {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Air Quality in Vellore</h1>
+    <div id="data"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    fetch('vellore.json')
+        .then(response => response.json())
+        .then(data => {
+            const dataDiv = document.getElementById('data');
+            const pollution = data.data.current.pollution;
+            const weather = data.data.current.weather;
+
+            dataDiv.innerHTML = `
+                <p>City: ${data.data.city}</p>
+                <p>State: ${data.data.state}</p>
+                <p>Country: ${data.data.country}</p>
+                <h3>Current Pollution</h3>
+                <p>AQI (US): ${pollution.aqius}</p>
+                <p>Main Pollutant (US): ${pollution.mainus}</p>
+                <p>AQI (CN): ${pollution.aqicn}</p>
+                <p>Main Pollutant (CN): ${pollution.maincn}</p>
+                <h3>Current Weather</h3>
+                <p>Temperature: ${weather.tp}°C</p>
+                <p>Pressure: ${weather.pr} hPa</p>
+                <p>Humidity: ${weather.hu}%</p>
+                <p>Wind Speed: ${weather.ws} m/s</p>
+                <p>Wind Direction: ${weather.wd}°</p>
+                <p>Weather Icon: ${weather.ic}</p>
+            `;
+        })
+        .catch(error => console.error('Error:', error));
+});
+    </script>
+</body>
+</html>

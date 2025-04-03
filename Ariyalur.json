@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Ariyalur","state":"Tamil Nadu","country":"India","location":{"type":"Point","coordinates":[79.07556,11.13849]},"current":{"pollution":{"ts":"2024-11-10T10:00:00.000Z","aqius":70,"mainus":"p2","aqicn":42,"maincn":"p1"},"weather":{"ts":"2024-11-10T10:00:00.000Z","tp":33,"pr":1008,"hu":49,"ws":5.11,"wd":41,"ic":"01d"}}}}

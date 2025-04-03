@@ -1,0 +1,1 @@
+{"status":"success","data":{"city":"Ooty","state":"Tamil Nadu","country":"India","location":{"type":"Point","coordinates":[76.69521,11.4134]},"current":{"pollution":{"ts":"2024-11-10T06:00:00.000Z","aqius":73,"mainus":"p2","aqicn":39,"maincn":"p1"},"weather":{"ts":"2024-11-10T06:00:00.000Z","tp":17,"pr":1014,"hu":55,"ws":2.18,"wd":64,"ic":"04d"}}}}
